@@ -1,7 +1,6 @@
-allprojects {
+subprojects {
 	apply plugin: 'java'
 	apply plugin: 'eclipse-wtp'
-	apply plugin: 'jetty'
 	
 	sourceCompatibility = 1.6 //this is used while compiling java code
 	targetCompatibility = 1.6 //this is used when creating class file
@@ -17,24 +16,5 @@ allprojects {
 			      contextPath = 'billSubmission'
   			  }
  		 }
-	}
-}
-
-project(':application') {
-	apply plugin: 'war'
-	
-	jettyRunWar {
-		contextPath = "billSubmission"
-		httpPort = 8080
-	}
-	
-	dependencies {
-		compile 'ch.qos.logback:logback-classic:1.1.3'
-		compile 'org.springframework:spring-webmvc:4.1.6.RELEASE'
-		compile group: 'org.springframework', name: 'spring-jdbc', version: '4.1.6.RELEASE'
-		compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
-		compile 'javax.servlet:jstl:1.2'
-		compile group: 'org.json', name: 'json', version: '20090211'
-		compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
 	}
 }

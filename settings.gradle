@@ -1,2 +1,3 @@
+include "config-server"
 include "application"
 rootProject.name = "BillSubmission"
