@@ -2,13 +2,26 @@ apply plugin: 'war'
 apply plugin: 'jetty'
 	
 jettyRunWar {
+	println "here"
 	contextPath = "billSubmission"
 	httpPort = 8080
 }
-	
+
+task cleanThis() {
+	println "\n##### clean start #####\n"
+	clean
+	println "\n##### clean end #####\n"
+}
+
+task buildThis(dependsOn: cleanThis) {
+	doLast {
+		println "\n##### build start #####\n" 
+		build
+		println "\n##### build end #####\n"
+	}
+}
+
 dependencies {
-	compile project(':config-server')
-	
 	compile 'ch.qos.logback:logback-classic:1.1.3'
 	compile 'org.springframework:spring-webmvc:4.1.6.RELEASE'
 	compile group: 'org.springframework', name: 'spring-jdbc', version: '4.1.6.RELEASE'

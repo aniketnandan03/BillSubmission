@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-Hello OMG
-</body>
+	<head>
+		<meta charset="ISO-8859-1">
+		<script src="libs/jquery/jquery_v3.1.1.js"></script>
+		<script src="libs/react/react.js"></script>
+		<script src="libs/react/react-dom.js"></script>
+		<script src="libs/browser.min.js"></script>
+		
+		<title>Bill Registration Forum</title>
+	</head>
+	<body>
+		Hello OMG
+		<div id='root'></div>
+		<script type="text/babel">
+			console.log("hi");
+			var Greeting = React.createClass({
+    		    render: function() {
+   			       return (
+         			   <p>Hello, Universe</p>
+     		     )
+ 		       }
+   		   });
+			ReactDOM.render(
+        		<Greeting/>,
+       			 document.getElementById('root')
+      		);
+	   	</script>	
+	</body>
 </html>
