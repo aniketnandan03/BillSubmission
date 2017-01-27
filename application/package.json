@@ -1,0 +1,19 @@
+{
+  "name": "www.demo.com",
+  "version": "1.0.0",
+  "description": "This project contains java Spring as backend and React as frontend to fetch and populate data for user.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/aniketnandan03/BillSubmission.git"
+  },
+  "author": "Aniket Nandan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aniketnandan03/BillSubmission/issues"
+  },
+  "homepage": "https://github.com/aniketnandan03/BillSubmission#readme"
+}
